@@ -1,11 +1,5 @@
-const http = require('http');
+const app = require('./server');
 
-const server = http.createServer(async (req, res) => {
-    if(req.method === 'GET' && req.url === '/') {
-        res.end();
-    }
-})
-
-server.listen(3001, () => {
-    console.log('Server: 3001')
-})
+app.listen(3001,() => {
+    console.log(3001)
+});
